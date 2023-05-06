@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about this legal case?',
+        message: 'Olá! Sou um robô treinado sobre a CVM 175 e outros documentos. Faça qualquer pergunta que reponderei incluindo referências ao documento original!',
         type: 'apiMessage',
       },
     ],
@@ -48,7 +48,7 @@ export default function Home() {
     setError(null);
 
     if (!query) {
-      alert('Please input a question');
+      alert('Por favor escreva uma pergunta');
       return;
     }
 
@@ -106,7 +106,7 @@ export default function Home() {
       messageListRef.current?.scrollTo(0, messageListRef.current.scrollHeight);
     } catch (error) {
       setLoading(false);
-      setError('An error occurred while fetching the data. Please try again.');
+      setError('Ocorreu um erro obtendo dados. Por favor tente novamente.');
       console.log('error', error);
     }
   }
@@ -123,9 +123,9 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className="mx-auto flex flex-col gap-4">
+        <div className="mx-auto flex flex-col gap-4" style={{ color: '#FFFF'}}>
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With Your Legal Docs
+            Converse com a CVM 175
           </h1>
           <main className={styles.main}>
             <div className={styles.cloud}>
@@ -223,8 +223,8 @@ export default function Home() {
                     name="userInput"
                     placeholder={
                       loading
-                        ? 'Waiting for response...'
-                        : 'What is this legal case about?'
+                        ? 'Processando resposta...'
+                        : 'O que são classes e subclasses de fundos?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -260,9 +260,9 @@ export default function Home() {
             )}
           </main>
         </div>
-        <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
+        <footer className="m-auto p-4" style={{ color: '#FFFF'}}>
+          <a href="https://www.linkedin.com/in/flpgdt/">
+            flpgdt@gmail.com - Powered by LangChainAI. 
           </a>
         </footer>
       </Layout>
