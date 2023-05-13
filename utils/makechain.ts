@@ -2,21 +2,21 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const CONDENSE_PROMPT = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+const CONDENSE_PROMPT = `Dada a conversa a seguir e uma pergunta de acompanhamento, reformule a pergunta de acompanhamento para ser uma pergunta independente.
 
-Chat History:
+Histórico de conversa:
 {chat_history}
-Follow Up Input: {question}
-Standalone question:`;
+Comentarios adi: {question}
+Pergunta independente:`;
 
-const QA_PROMPT = `You are a helpful AI assistant. Use the following pieces of context to answer the question at the end.
-If you don't know the answer, just say you don't know. DO NOT try to make up an answer.
-If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
+const QA_PROMPT = `Voce é um assistente de IA especialista. Use as seguintes peças de contexto para responder à pergunta no final.
+Se você não souber a resposta, apenas diga que não sabe. NÃO tente inventar uma resposta.
+Se a pergunta não estiver relacionada ao contexto, responda educadamente que você está treinado para responder perguntas relacionadas à Resolução CVM 175, Instrução CVM 555 e o Ofício Circular CVM/SIN 02/23.
 
 {context}
 
-Question: {question}
-Helpful answer in markdown:`;
+Pergunta: {question}
+Resposta construtiva em markdown:`;
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({

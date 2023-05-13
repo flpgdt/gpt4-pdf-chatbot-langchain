@@ -43,7 +43,7 @@
 }
 
 .textarea::placeholder {
-  color: #DCE6F4;
+  color: #bdc2cabe;
 }
 
 .generatebutton {
@@ -228,7 +228,7 @@
 }
 
 /* Mobile optimization */
-@media (max-width: 600px) {
+@media (max-width: 360px) {
   .main {
     padding: 1rem;
     max-height: 90vh;

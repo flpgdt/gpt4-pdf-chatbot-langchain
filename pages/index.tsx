@@ -137,10 +137,10 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/bot-image.png"
+                        src="/175bot-image.png"
                         alt="AI"
-                        width="40"
-                        height="40"
+                        width="55"
+                        height="55"
                         className={styles.boticon}
                         priority
                       />
@@ -150,10 +150,10 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/usericon.png"
+                        src="/175usericon.png"
                         alt="Me"
-                        width="30"
-                        height="30"
+                        width="50"
+                        height="50"
                         className={styles.usericon}
                         priority
                       />
@@ -195,7 +195,7 @@ export default function Home() {
                                       {doc.pageContent}
                                     </ReactMarkdown>
                                     <p className="mt-2">
-                                      <b>Source:</b> {doc.metadata.source}
+                                      <b>Fonte:</b> {doc.metadata.source}
                                     </p>
                                   </AccordionContent>
                                 </AccordionItem>
@@ -224,7 +224,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Processando resposta...'
-                        : 'O que são classes e subclasses de fundos?'
+                        : 'Explique fundos fechados.'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
