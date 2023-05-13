@@ -16,8 +16,18 @@ export abstract class BufferLoader extends BaseDocumentLoader {
     let buffer: Buffer;
     let metadata: Record<string, string>;
     if (typeof this.filePathOrBlob === 'string') {
+
       buffer = await readFile(this.filePathOrBlob);
-      metadata = { source: this.filePathOrBlob };
+      let doc = ''
+      if (this.filePathOrBlob.includes('555')) {
+        doc = 'Instrução CVM 555';
+      } else if (this.filePathOrBlob.includes('175')) {
+        doc = 'Resolução CVM 175';
+      } else if (this.filePathOrBlob.includes('0223')) {
+        doc = 'Ofício Circular CVM/SIN 02/23';
+      }
+  
+      metadata = { source: doc };
     } else {
       buffer = await this.filePathOrBlob
         .arrayBuffer()

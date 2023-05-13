@@ -1,0 +1,6 @@
+curl -i -X POST 'https://docbot-2411094.svc.asia-northeast1-gcp.pinecone.io/vectors/delete?namespace=docbot' \
+  -H 'Api-Key: a4c9349b-d124-4077-931f-f685e8f0c14b' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "filter": {"source": {"$in": ["/Users/filippo/Dropbox/Projects/simple_chat/gpt4-pdf-chatbot-langchain/docs/inst555.pdf"]}}
+  }'
