@@ -188,7 +188,7 @@ export default function Home() {
                               <div key={`messageSourceDocs-${index}`}>
                                 <AccordionItem value={`item-${index}`}>
                                   <AccordionTrigger>
-                                    <h3>Source {index + 1}</h3>
+                                    <h3>Fonte {index + 1}</h3>
                                   </AccordionTrigger>
                                   <AccordionContent>
                                     <ReactMarkdown linkTarget="_blank">
