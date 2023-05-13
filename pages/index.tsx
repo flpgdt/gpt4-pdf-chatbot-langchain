@@ -260,7 +260,7 @@ export default function Home() {
             )}
           </main>
         </div>
-        <footer className="m-auto p-4" style={{ color: '#FFFF'}}>
+        <footer className="m-auto p-4" style={{ color: '#FFFF', backgroundColor: '#001E62' }}>
           <a href="https://www.linkedin.com/in/flpgdt/">
             flpgdt@gmail.com - Powered by LangChainAI. 
           </a>
